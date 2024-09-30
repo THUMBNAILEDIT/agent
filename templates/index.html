@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Input Form</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="input-form">
+      <div class="form-wrap">
+        <h1 class="form-headline">Please Fill Out This Form</h1>
+        <form class="form" action="/submit" method="post">
+          <label class="form-label" for="description">Video Description:</label
+          ><br />
+          <input
+            class="form-input"
+            type="text"
+            id="description"
+            name="description"
+            required
+          /><br /><br />
+          <label class="form-label" for="niche">Niche:</label><br />
+          <input
+            class="form-input"
+            type="text"
+            id="niche"
+            name="niche"
+            required
+          /><br /><br />
+          <input class="form-submit pointer" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
